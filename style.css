@@ -31,7 +31,7 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   text-align: center;
-  font-family: cursive;
+  font-family: sans-serif;
 }
 
 .dropdown-content a {
@@ -50,4 +50,10 @@
 }
 body {
   background-image: linear-gradient(lightslategray, gainsboro);
+}
+.download {
+  background-image: url(images/Google-Play-Button-Sized.png);
+  display: block;
+  width: 570px;
+  height: 175px;
 }
