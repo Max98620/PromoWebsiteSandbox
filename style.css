@@ -52,6 +52,7 @@
 
 body {
   background-image: linear-gradient(#3366cc, #33ffbb);
+  height: 100vh;
 }
 
 .download {
