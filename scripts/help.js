@@ -1,9 +1,11 @@
 
-function toggleTheme() {
+function setTheme(theme, randomizer) {
+  var theme = document.getElementsByTagName('link')[0];
+  var randomizer = Math.floor(Math.random() * 5);
 
-    var theme = document.getElementsByTagName('link')[0];
-      theme.setAttribute('href', '../terror.css');
-
-    document.getElementById("run").innerHTML = "Nightmare Nightmare Nightmare Nightmare Nightmare Nightmare Nightmare NightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmareNightmare"
-    document.getElementById("back").innerHTML = "No Escape"
-}
+  if (randomizer < 2) {
+    theme.setAttribute('href', '../terror.css');
+    document.getElementById("run").innerHTML = "ESCAPE"
+  }
+  console.log(randomizer)
+  }
