@@ -1,11 +1,21 @@
 
-function setTheme(theme, randomizer) {
-  var theme = document.getElementsByTagName('link')[0];
-  var randomizer = Math.floor(Math.random() * 5);
+let rTheme = ["../css/terror.css", "../css/style.css"];
+var path = rTheme[Math.floor(Math.random() * rTheme.length)];
 
-  if (randomizer < 2) {
-    theme.setAttribute('href', '../terror.css');
-    document.getElementById("run").innerHTML = "ESCAPE"
+function setTheme(theme, path, rTheme) {
+  var theme = document.getElementsByTagName('link')[0];
+  theme.setAttribute('href', path);
+}
+
+if (path == 3) {
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
   }
-  console.log(randomizer)
-  }
+}
+console.log(path)
