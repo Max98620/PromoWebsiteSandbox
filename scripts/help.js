@@ -1,21 +1,29 @@
-
-let rTheme = ["../css/terror.css", "../css/style.css"];
+var rTheme = ["../css/terror.css", "../css/style.css", "../css/terror2.css"];
 var path = rTheme[Math.floor(Math.random() * rTheme.length)];
 
-function setTheme(theme, path, rTheme) {
-  var theme = document.getElementsByTagName('link')[0];
+function setTheme(rTheme, theme) {
+  var theme = document.querySelector("link");
   theme.setAttribute('href', path);
+  console.log(path)
 }
 
-if (path == 3) {
+if (path == "../css/terror2.css") {
+  webcam()
+} else if (path == "../css/style.css") {
+  console.log("penis")
+}
+function webcam() {
   if (navigator.mediaDevices.getUserMedia) {
     navigator.mediaDevices.getUserMedia({ video: true })
       .then(function (stream) {
         video.srcObject = stream;
       })
       .catch(function (err0r) {
-        console.log("Something went wrong!");
+        fear();
       });
   }
 }
-console.log(path)
+
+function fear() {
+  console.log("fear")
+}
