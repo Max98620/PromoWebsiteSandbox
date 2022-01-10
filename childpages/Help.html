@@ -3,14 +3,20 @@
     <meta charset="utf-8">
     <title>Help</title>
   </head>
-  <body>
+  <body onload="getQuestion()">
     <a href="../index.html"><button class="back"type="button" name="button"><i class="arrow left"></i></button></a>
-    <p class="help" id="run" style="font-size: 64px">:-()</p>
-    <button onclick="setTheme()" id="back" class="bigbutton" type="button" name="button">Push Me</button>
+    <h1 class="title">Help</h1>
+    <section class="info">
+    <p>Choose from the options below</p>
+    <p>&nbsp;</p>
+    <select onclick="getQuestion()"id="drop" class="Drop" name="questions">
+      <option selected value="0">How do I download the game?</option>
+      <option value="1">Where do babies come from?</option>
+    </select>
+    </section>
+    <p class="answer"id="answer"></p>
   </body>
 
-  <script type="text/javascript" src="../scripts/help.js">
-
-  </script>
+  <script type="text/javascript" src="../scripts/help1.js"></script>
   <link href="../css/style.css" rel="stylesheet">
 </html>

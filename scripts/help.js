@@ -1,4 +1,4 @@
-var rTheme = ["../css/terror.css", "../css/style.css", "../css/terror2.css"];
+var rTheme = ["../css/terror.css", "../css/terror2.css"];
 var path = rTheme[Math.floor(Math.random() * rTheme.length)];
 
 function setTheme(rTheme, theme) {
@@ -7,10 +7,12 @@ function setTheme(rTheme, theme) {
   console.log(path)
 }
 
-if (path == "../css/terror2.css") {
-  webcam()
-} else if (path == "../css/style.css") {
-  console.log("penis")
+function random(){
+  if (path == "../css/terror2.css") {
+    webcam()
+  } else if (path == "../css/terror.css") {
+    console.log("penis")
+  }
 }
 function webcam() {
   if (navigator.mediaDevices.getUserMedia) {
@@ -25,5 +27,5 @@ function webcam() {
 }
 
 function fear() {
-  console.log("fear")
+  console.log("wow")
 }
